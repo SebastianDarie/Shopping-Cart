@@ -11,7 +11,11 @@ const Home = () => {
       <NavBar />
       <Flex justify='center' mb={20}>
         <Box w='46%'>
-          <Image loading='lazy' h={600} src='../../src/images/main-bg.jpg' />
+          <Image
+            loading='lazy'
+            h={600}
+            src='../../src/images/rog-keyboard.jpg'
+          />
         </Box>
         <Flex w='54%' bg='gray.900' color='gray.50' justify='left'>
           <Flex flexDir='column' justify='center' ml={10}>
@@ -64,38 +68,6 @@ const Home = () => {
           <CustomBtn text='Show All Services' width='220px' />
         </Box>
       </Flex>
-
-      {/* <Box
-        backgroundColor='#fbf9f6'
-        backgroundImage='url(../../bg-image.jpg)'
-        position='relative'
-        maxW='100vw'
-        h={700}
-        mt={20}
-      >
-        <Box
-          backgroundColor='transparent'
-          backgroundImage='linear-gradient(180deg, rgba(14, 15, 48, 0.9) 0%, #011021 100%)'
-          opacity={1}
-          position='absolute'
-          w='100%'
-          h='100%'
-        ></Box>
-        <Flex w='100%'>
-          <Box w='50%' p={20}>
-            <Heading color='yellow.500'>ROG ZEPHYRUS GX501</Heading>
-            <Text>from $1440</Text>
-            <Text>
-              Jianbing brunch mixtape hell of trust fund helvetica yr street art
-              flexitarian coloring book farm-to-table. Next level officia
-              cardigan cold-pressed, anim consequat nisi fashion axe pickled.
-              Pop-up portland ad laborum esse
-            </Text>
-            <CustomBtn text='Shop Now!' />
-          </Box>
-          <Box w='50%'></Box>
-        </Flex>
-      </Box> */}
 
       <Flex bg='gray.900' align='center' justify='center' flexDir='column'>
         <Box mt={10}>

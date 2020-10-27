@@ -14,7 +14,7 @@ const CustomBtn = ({ text, width }) => {
       borderRadius={5}
       h={54}
       w={width}
-      _hover={{ bg: 'yellow.300', color: 'red.500' }}
+      _hover={{ bg: 'green.300', color: '#D368AA' }}
     >
       {text}
     </Button>

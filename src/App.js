@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { HashRouter, Switch, Route } from 'react-router-dom'
 import { CSSReset, ThemeProvider, theme } from '@chakra-ui/core'
 
 import Home from './pages/Home'
@@ -21,13 +21,13 @@ const App = () => {
   return (
     <ThemeProvider theme={newTheme}>
       <CSSReset />
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/shop' component={Shop} />
           <Route exact path='/about' component={About} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   )
 }

@@ -14,8 +14,8 @@ const Card = ({ title, icon }) => {
         borderRadius={6}
       >
         <Box
-          bg='yellow.300'
-          color='red.500'
+          bg='green.300'
+          color='#D368AA'
           borderRadius='50%'
           fontSize='40px'
           padding='4px'
