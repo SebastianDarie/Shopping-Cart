@@ -6,7 +6,7 @@ const TeamCard = ({ name, position, img }) => {
     <Flex flexDir='column' align='center'>
       <Box bg='gray.50' m={10}>
         <Box>
-          <Image src={img}></Image>
+          <Image loading='lazy' src={img}></Image>
         </Box>
         <Box mt={5}>
           <Heading as='h5' size='xl' textAlign='left' ml={5} mb={5}>

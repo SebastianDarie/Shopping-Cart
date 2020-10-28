@@ -18,10 +18,10 @@ import {
 import NavBar from '../components/NavBar'
 import TeamCard from '../components/TeamCard'
 
-const About = () => {
+const About = ({ cartItemCount }) => {
   return (
     <>
-      <NavBar />
+      <NavBar num={cartItemCount} />
       <Flex
         bg='gray.600'
         position='relative'
@@ -103,7 +103,12 @@ const About = () => {
         </Flex>
 
         <Flex align='flex-end' justify='center' w='50%' ml={0}>
-          <Image w={460} h={569} src='../../src/images/story.jpg'></Image>
+          <Image
+            loading='lazy'
+            w={460}
+            h={569}
+            src='../../src/images/story.jpg'
+          ></Image>
         </Flex>
       </Flex>
 

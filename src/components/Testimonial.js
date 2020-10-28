@@ -21,7 +21,7 @@ const Testimonial = ({ name, location, img, stars }) => {
       </Box>
       <Flex flexDir='column' align='center'>
         <Box mt={5}>
-          <Image borderRadius='50%' src={img}></Image>
+          <Image loading='lazy' borderRadius='50%' src={img}></Image>
         </Box>
         <Box mt={5} mb={5}>
           <Text>{name} </Text>

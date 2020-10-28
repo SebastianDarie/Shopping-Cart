@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '@chakra-ui/core'
 import { NavLink } from 'react-router-dom'
 
-const CustomBtn = ({ text, width }) => {
+const CustomBtn = ({ text, width, height }) => {
   return (
     <Button
       as={NavLink}
@@ -12,7 +12,7 @@ const CustomBtn = ({ text, width }) => {
       letterSpacing='1.4px'
       fontWeight='bold'
       borderRadius={5}
-      h={54}
+      h={height}
       w={width}
       _hover={{ bg: 'green.300', color: '#D368AA' }}
     >

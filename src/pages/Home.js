@@ -5,10 +5,10 @@ import Card from '../components/Card'
 import CustomBtn from '../components/CustomBtn'
 import Testimonial from '../components/Testimonial'
 
-const Home = () => {
+const Home = ({ cartItemCount }) => {
   return (
     <>
-      <NavBar />
+      <NavBar num={cartItemCount} />
       <Flex justify='center' mb={20}>
         <Box w='46%'>
           <Image
@@ -28,7 +28,7 @@ const Home = () => {
               augue ipsum sed tortor. Quisque sit amet est ac turpis malesuada
               fermentum.
             </Text>
-            <CustomBtn text='Shop Page' width='170px' />
+            <CustomBtn text='Shop Page' width='170px' height='54px' />
           </Flex>
         </Flex>
       </Flex>
@@ -65,7 +65,7 @@ const Home = () => {
         </Flex>
 
         <Box mt={8}>
-          <CustomBtn text='Show All Services' width='220px' />
+          <CustomBtn text='Show All Services' width='220px' height='54px' />
         </Box>
       </Flex>
 

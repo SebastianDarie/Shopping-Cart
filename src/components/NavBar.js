@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Flex, Link, Image, Text } from '@chakra-ui/core'
 import { FaShoppingCart } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
 
-const NavBar = () => {
+const NavBar = ({ num = 0 }) => {
+  const [count, setCount] = useState(num)
+
   return (
     <Flex
       as='nav'
@@ -35,7 +37,7 @@ const NavBar = () => {
         <Link as={NavLink} to='/cart' fontWeight='bold'>
           <Flex align='center' justify='center' mt={1} ml={-2}>
             <FaShoppingCart />
-            <Text>0</Text>
+            <Text>{count !== num ? setCount(num) : count}</Text>
           </Flex>
         </Link>
       </Flex>
