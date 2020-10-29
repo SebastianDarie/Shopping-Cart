@@ -18,6 +18,9 @@ import {
 import NavBar from '../components/NavBar'
 import TeamCard from '../components/TeamCard'
 
+import gaming from '../images/asus-gaming.jpg'
+import story from '../images/story.jpg'
+
 const About = ({ cartItemCount }) => {
   return (
     <>
@@ -32,7 +35,7 @@ const About = ({ cartItemCount }) => {
         justify='flex-start'
       >
         <Box
-          backgroundImage='url(../../src/images/asus-gaming.jpg)'
+          backgroundImage={`url(${gaming})`}
           backgroundPosition='center center'
           backgroundRepeat='no-repeat'
           backgroundSize='cover'
@@ -103,12 +106,7 @@ const About = ({ cartItemCount }) => {
         </Flex>
 
         <Flex align='flex-end' justify='center' w='50%' ml={0}>
-          <Image
-            loading='lazy'
-            w={460}
-            h={569}
-            src='../../src/images/story.jpg'
-          ></Image>
+          <Image loading='lazy' w={460} h={569} src={story}></Image>
         </Flex>
       </Flex>
 

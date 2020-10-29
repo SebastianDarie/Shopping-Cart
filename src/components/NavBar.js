@@ -3,6 +3,8 @@ import { Box, Flex, Link, Image, Text } from '@chakra-ui/core'
 import { FaShoppingCart } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
 
+import logo from '../images/logo_transparent.png'
+
 const NavBar = ({ num = 0 }) => {
   const [count, setCount] = useState(num)
 
@@ -16,11 +18,7 @@ const NavBar = ({ num = 0 }) => {
     >
       <Flex align='center' ml={5} mr={5} mt={-5} mb={-4}>
         <Box>
-          <Image
-            size='120px'
-            src='../../src/images/logo_transparent.png'
-            alt='logo'
-          />
+          <Image size='120px' src={logo} alt='logo' />
         </Box>
       </Flex>
 
