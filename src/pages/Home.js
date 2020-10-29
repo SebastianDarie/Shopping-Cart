@@ -11,7 +11,11 @@ const Home = ({ cartItemCount }) => {
       <NavBar num={cartItemCount} />
       <Flex justify='center' mb={20}>
         <Box w='46%'>
-          <Image loading='lazy' h={600} src='../src/images/rog-keyboard.jpg' />
+          <Image
+            loading='lazy'
+            h={600}
+            src='../../src/images/rog-keyboard.jpg'
+          />
         </Box>
         <Flex w='54%' bg='gray.900' color='gray.50' justify='left'>
           <Flex flexDir='column' justify='center' ml={10}>
