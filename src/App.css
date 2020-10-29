@@ -1,0 +1,25 @@
+table {
+  text-align: left;
+  width: 100%;
+  border-spacing: 20px 5px;
+}
+
+tr {
+  display: table-row;
+  text-align: left;
+  padding: 2px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+td,
+th {
+  width: auto;
+  text-align: left;
+  max-height: 100px;
+  padding: 9px 12px;
+}
+
+.product-img {
+  max-width: 75px;
+  max-height: 75px;
+}

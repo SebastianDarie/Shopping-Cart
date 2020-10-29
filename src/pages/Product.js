@@ -7,6 +7,7 @@ import {
   Flex,
   Heading,
   Text,
+  IconButton,
   Image,
   PseudoBox,
   Link,
@@ -34,11 +35,15 @@ import BreadCrumbNav from '../components/BreadCrumbNav'
 import ReviewForm from '../components/ReviewForm'
 import RelatedProduct from '../components/RelatedProduct'
 
-const Product = ({ cartItemCount, setCartItemCount, location }) => {
+const Product = ({
+  cartItemCount,
+  setCartItemCount,
+  itemsInCart,
+  setItemsInCart,
+  location,
+}) => {
   const [addedToCart, setAddedToCart] = useState(false)
   const [numberOfItems, setNumberOfItems] = useState(1)
-  const [itemsInCart, setItemsInCart] = useState([])
-  //   const [cartItemCount, setCartItemCount] = useState(0)
 
   const laptop = location.state.laptop
   const laptopArr = location.state.arr
@@ -49,17 +54,13 @@ const Product = ({ cartItemCount, setCartItemCount, location }) => {
     setItemsInCart([
       ...itemsInCart,
       {
-        name: laptop.name,
-        price: laptop.price,
-        img: laptop.img,
+        ...laptop,
         quantity: numberOfItems,
       },
     ])
-    setCartItemCount(cartItemCount + numberOfItems)
 
-    setTimeout(() => {
-      setAddedToCart(false)
-    }, 5000)
+    setCartItemCount(cartItemCount + numberOfItems)
+    setNumberOfItems(1)
   }
 
   const inputHandler = (e) => {
@@ -94,15 +95,18 @@ const Product = ({ cartItemCount, setCartItemCount, location }) => {
             style={{ display: addedToCart ? '' : 'none' }}
           >
             <AlertIcon />"{laptop.name}" has been added to your cart.
-            <Link
-              as={NavLink}
-              to={{ pathname: '/cart', state: { items: itemsInCart } }}
-              ml='auto'
-            >
+            <Link as={NavLink} to='/cart' ml='auto'>
               <Button letterSpacing='1.4px' fontWeight='bold'>
                 View Cart
               </Button>
             </Link>
+            <IconButton
+              aria-label='dismiss-alert'
+              icon='small-close'
+              bg='#c6f5d5'
+              _hover={{ bg: '#c6f5d5' }}
+              onClick={() => setAddedToCart(false)}
+            />
           </Alert>
 
           <Box>
@@ -207,7 +211,11 @@ const Product = ({ cartItemCount, setCartItemCount, location }) => {
             </Flex>
 
             <Flex flexDir='column' mb={5}>
-              <RelatedProduct laptops={laptopArr} />
+              <RelatedProduct
+                laptops={laptopArr}
+                setAddedToCart={setAddedToCart}
+                setNumberOfItems={setNumberOfItems}
+              />
             </Flex>
           </Box>
         </Box>

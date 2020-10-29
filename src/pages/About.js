@@ -32,7 +32,7 @@ const About = ({ cartItemCount }) => {
         justify='flex-start'
       >
         <Box
-          backgroundImage='url(../../src/images/asus-gaming.jpg)'
+          backgroundImage='url(../src/images/asus-gaming.jpg)'
           backgroundPosition='center center'
           backgroundRepeat='no-repeat'
           backgroundSize='cover'
@@ -107,7 +107,7 @@ const About = ({ cartItemCount }) => {
             loading='lazy'
             w={460}
             h={569}
-            src='../../src/images/story.jpg'
+            src='../src/images/story.jpg'
           ></Image>
         </Flex>
       </Flex>

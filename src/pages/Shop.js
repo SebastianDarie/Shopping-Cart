@@ -7,7 +7,7 @@ import ProductCard from '../components/ProductCard'
 import Pagination from '../components/Pagination'
 import { data } from '../data/data'
 
-const Shop = () => {
+const Shop = ({ cartItemCount }) => {
   const [laptops] = useState(data)
   const [currPage, setCurrPage] = useState(1)
   const [laptopsPerPage] = useState(9)
@@ -20,7 +20,7 @@ const Shop = () => {
 
   return (
     <>
-      <NavBar />
+      <NavBar num={cartItemCount} />
 
       <Box maxW={1140} ml='auto' mr='auto' mt={5} pl={15} pr={15} h='100vh'>
         <Box maxW='90%' ml='auto' mr='auto' mb={5}>

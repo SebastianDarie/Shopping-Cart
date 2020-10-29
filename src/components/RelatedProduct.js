@@ -3,7 +3,7 @@ import { Heading, Link, SimpleGrid } from '@chakra-ui/core'
 import ProductCard from './ProductCard'
 import { NavLink } from 'react-router-dom'
 
-const RelatedProduct = ({ laptops }) => {
+const RelatedProduct = ({ laptops, setAddedToCart, setNumberOfItems }) => {
   let shuffledArr = []
 
   const shuffleArray = (array) => {
@@ -30,6 +30,10 @@ const RelatedProduct = ({ laptops }) => {
               state: { laptop: laptop, arr: laptops },
             }}
             key={laptop.id}
+            onClick={() => {
+              setAddedToCart(false)
+              setNumberOfItems(1)
+            }}
           >
             <ProductCard
               img={laptop.img}
