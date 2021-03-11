@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
-import { Box, Flex, Link, Text, SimpleGrid } from '@chakra-ui/core'
-import { NavLink } from 'react-router-dom'
-import NavBar from '../components/NavBar'
-import BreadCrumbNav from '../components/BreadCrumbNav'
-import ProductCard from '../components/ProductCard'
-import Pagination from '../components/Pagination'
-import { data } from '../data/data'
+import React, { useState } from 'react';
+import { Box, Flex, Link, Text, SimpleGrid } from '@chakra-ui/core';
+import { NavLink } from 'react-router-dom';
+import NavBar from '../components/NavBar';
+import BreadCrumbNav from '../components/BreadCrumbNav';
+import ProductCard from '../components/ProductCard';
+import Pagination from '../components/Pagination';
+import { data } from '../data/data';
 
 const Shop = ({ cartItemCount }) => {
-  const [laptops] = useState(data)
-  const [currPage, setCurrPage] = useState(1)
-  const [laptopsPerPage] = useState(9)
+  const [laptops] = useState(data);
+  const [currPage, setCurrPage] = useState(1);
+  const [laptopsPerPage] = useState(9);
 
-  const lastIdx = currPage * laptopsPerPage
-  const firstIdx = lastIdx - laptopsPerPage
-  const currLaptops = laptops.slice(firstIdx, lastIdx)
+  const lastIdx = currPage * laptopsPerPage;
+  const firstIdx = lastIdx - laptopsPerPage;
+  const currLaptops = laptops.slice(firstIdx, lastIdx);
 
-  const changePage = (pageNum) => setCurrPage(pageNum)
+  const changePage = (pageNum) => setCurrPage(pageNum);
 
   return (
     <>
@@ -27,7 +27,8 @@ const Shop = ({ cartItemCount }) => {
           <Flex justify='space-between' fontSize={12} mb={5}>
             <BreadCrumbNav />
             <Text>
-              Showing 1-{laptopsPerPage} of {laptops.length}
+              Showing {currPage * laptopsPerPage - 8}-
+              {currPage * laptopsPerPage} of {laptops.length}
             </Text>
           </Flex>
           <SimpleGrid columns={3} spacing={8}>
@@ -60,7 +61,7 @@ const Shop = ({ cartItemCount }) => {
         </Box>
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default Shop
+export default Shop;
